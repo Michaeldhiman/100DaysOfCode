@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
     int test_case,total_people,target_age;
     scanf("%d",&test_case);
     for(int i=1;i<=test_case;i++){
@@ -17,5 +17,6 @@ int main(void) {
         }
         printf("%d\n",count);
     }
+    return 0;
 }
 
