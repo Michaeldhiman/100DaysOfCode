@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     int test_case;
-    printf("Enter the Test case:\n");
+    printf("Enter the no of Test cases:\n");
     scanf("%d",&test_case);
     while(test_case--){
         long long int number;
