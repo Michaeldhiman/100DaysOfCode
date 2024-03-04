@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int test_case;
+    scanf("%d",&test_case);
+    while(test_case--){
+        int length;
+        scanf("%d",&length);
+        int arr[length];
+        for(int i=0;i<length;i++){
+            scanf("%d",&arr[i]);
+        }
+        int count=0;
+        int index1=0;
+        int index2=0;
+        int max=arr[0];
+        for(int i=1;i<length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+                index1=i;
+            }
+        }
+         while(arr[length-1]!=length){
+            if(arr[index1]>arr[index1+1]){
+                int temp=arr[index1];
+                arr[index1]=arr[index1+1];
+                arr[index1+1]=temp;
+                count++;
+            }
+          index1++;
+        }
+       for(int i=0;i<length;i++){
+             if(arr[i]==1)  index2=i;  
+       }
+        int step=index2+count;
+        printf("%d\n",step);
+    
+    }
+    return 0;
+}
+
