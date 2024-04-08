@@ -18,7 +18,7 @@ int main(){
             last=previous;
             previous=current;
         }
-            cout<<current<<" ";
+            cout<<n <<"-th "<<"Fibonacci number is:"<<current<<" ";
     }
     return 0;
 }
