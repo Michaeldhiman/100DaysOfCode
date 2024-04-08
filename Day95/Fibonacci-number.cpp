@@ -1,23 +1,24 @@
+
 #include<iostream>
 using namespace std;
 int main(){
     int n;
     cout<<"Enter the term to be find: ";
     cin>>n;
-    int a=0;
-    int b=1;
+    int last=0;
+    int previous=1;
     if(n<=1){
-        cout<<a;
+        cout<<last;
     }else if(n==2){
-        cout<<b;
+        cout<<previous;
     }else{
-        int c;
+        int current=0;
         for(int i=3;i<=n;i++){
-            c=a+b;
-            a=b;
-            b=c;
+            current=previous+last;
+            last=previous;
+            previous=current;
         }
-            cout<<c<<" ";
+            cout<<current<<" ";
     }
     return 0;
 }
